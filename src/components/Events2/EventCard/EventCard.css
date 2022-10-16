@@ -1,0 +1,94 @@
+.event-card {
+  max-width: 18rem;
+  height:26rem ;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: hidden;
+  transform: scale(100%);
+  transform-origin: 9.5rem 23rem;
+  border-radius: 0.6rem;
+  box-shadow: 0.5rem 0.5rem 2rem transparent;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0.5rem 0.5rem 2rem rgb(0, 0, 0);
+  transform: scale(107%);
+}
+
+.icon {
+  height: 12rem;
+  width: 18rem;
+}
+
+.event-card-bot {
+  /* border-top: 1px white solid; */
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0 0rem 0;
+  background: var(--color-dark);
+  height: 16rem;
+  
+  
+}
+.event-card-bot h3 {
+  font-size: 1.7rem;
+  font-family: iceland;
+  color:rgba(245, 157, 26, 0.929);
+}
+
+.event-card-bot p {
+  font-size: 1.1rem;
+  /* padding:0rem 1rem 0rem; */
+  margin: 0.5rem 1rem;
+  color: var(--color-light);
+  height: 55%;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+}
+.event-card-bot span {
+  padding-right: 2rem;
+}
+
+.input-field{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    display: flex;
+    flex: auto;
+    background: #444444;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/*-----Tab and low -----*/
+
+@media only screen and (max-width: 1100px) {
+  .event-card {
+    max-width: 17rem;
+    border-radius: 0.5rem;
+  }
+  .icon {
+    height: 11rem;
+    width: 17rem;
+  }
+  .event-card-bot h3 {
+    padding-bottom: 0.9rem;
+    font-size: 1.6rem;
+  }
+  .event-card-bot p{
+    font-size: medium;
+  }
+  .event-card-bot{
+    padding: 1rem 1rem;
+  }
+  
+
+}
