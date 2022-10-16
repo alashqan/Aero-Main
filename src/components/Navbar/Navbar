@@ -1,0 +1,53 @@
+import React from 'react'
+import { useState } from 'react'
+import {FiLogIn} from 'react-icons/fi'
+import {GiHamburgerMenu} from 'react-icons/gi'
+import { Fade } from 'react-awesome-reveal'
+import {Link} from 'react-router-dom'
+import './Navbar.css'
+import {navItems} from './NavItems'
+const Navbar = () => {
+    const [drop,setDrop] = useState(false);
+   
+  
+  return (
+  <nav className='navbar'>
+    <Link to="/" className='nav-logo'><img src="/images/logo/Aerophilia-logo-Color.png" className='logo' ></img></Link>
+    <div className='nav-menu'>
+        <Fade>
+    <ul className={`nav-items font-face-ic ${drop?'nav-responsive':''}`} >
+        {
+            navItems.map((item)=>{
+                return(
+                
+                    <li key={item.id} className={`${item.cName} 
+                    
+                    `}>
+                        <Link to={item.path} onClick={()=>{setDrop(false);
+                      
+                           
+                        }
+                            }>{item.title}</Link>
+
+                          
+                        
+                    </li>
+                    
+                );      
+            }) 
+        }
+        <li><a href="https://challengers.org.in/about.html"  target="_blank">ABOUT US</a></li>
+    </ul>
+    {/* <a href="https://challengers.org.in/about.html" className='about-us' target="_blank">ABOUT US</a>  */}
+    </Fade>
+        <button className='button-63 btn'>
+            <div className=''>Login</div>
+            <div className='login-sym'><FiLogIn/></div>
+            </button>
+    <GiHamburgerMenu className='hamburger' onClick={drop?()=>setDrop(false):()=>setDrop(true)}/>
+    </div>
+  </nav>
+  )
+}
+
+export default Navbar
