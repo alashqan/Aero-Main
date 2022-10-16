@@ -1,0 +1,142 @@
+
+.navbar{
+    display: flex;
+    width: 100vw;
+    height: 4.5rem;
+    padding: 1rem 5rem;
+    background-color: rgba(0, 0, 0, 0.211);
+    color: rgba(211, 123, 40, 0.842);
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 501;
+    
+}
+
+.logo{
+    width: 16rem;
+    position: relative;
+    top: 0.25rem;
+    margin-left: 0.3rem;
+    
+}
+.nav-logo{
+    padding-right: 1rem;
+    /* padding-left: 1rem; */
+}
+.nav-menu{
+    display: flex;
+    gap: 3rem;
+    /* padding: 1rem; */
+    align-items: center;
+   
+}
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-items a, .about-us {
+    color: var(--color-white);
+    font-weight:600;
+    text-decoration: none;
+  background-image: linear-gradient(#d99a5a, #d99a5a);
+  background-size: 0% 0.1em;
+  padding-bottom: 0.3rem;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+  }
+
+  .nav-items a:hover,
+  .nav-items a:focus,
+  .nav-items a:active {
+  background-size: 100% 0.1em;
+  
+  }
+  
+  .nav-item{
+    text-align: center;
+  }
+
+  .btn {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 0.3rem;
+  
+  }
+  .login-sym{
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger{
+    color: aliceblue;
+    display: none;
+  }
+
+
+/* ------Responsive ------- */
+
+@media only screen and (max-width: 1100px){
+  .hamburger{
+    display: block;
+    color: #d99a5a;
+    font-size: 1.5rem;
+  }
+  .hamburger:hover{
+    transition: all 0.2s ease;
+    color: #d99a5a88;
+  }
+  .nav-menu{
+    gap: 1rem;
+  }
+  .nav-items{
+  display: none;
+}
+.nav-responsive{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  text-align: center;
+  align-items: center;  
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.933);
+ 
+  /* filter: blur(5px); */
+  padding: 1rem 0rem;
+  top:4.3REM;
+  right: 0REM;
+  position: fixed;
+  z-index: 10000000;
+}
+
+.nav-item{
+ 
+  z-index: 10000000;
+}
+
+}
+@media only screen and (max-width: 520px){
+
+  .logo{
+    width: 9rem;
+  }
+  .navbar .button-63{
+    font-size: 0.9rem;
+  }
+  .navbar{
+    padding: 0 2rem;
+  }
+  .nav-logo{
+    padding-left: 0;
+  }
+}
